@@ -1,0 +1,186 @@
+package com.company;
+
+import java.time.LocalDateTime;
+public class Main {
+
+    public static void main( String[] args ) {
+        int second = LocalDateTime.now().getSecond();
+        System.out.println("current second: " + second);
+        // V1
+//        if (second > 30) {
+//            System.out.println("hello");
+//        } else {
+//            System.out.println("exit");
+//        }
+        // V2
+//        String messageToPrint;
+//        if (second > 30) {
+//            messageToPrint = "hello";
+//        } else {
+//            messageToPrint = "exit";
+//        }
+        //V3
+        String messageToPrint = second > 30 ? "hello" : "exit";
+        System.out.println(messageToPrint);
+    }
+}
+
+
+package com.company;
+
+import java.time.LocalDateTime;
+public class Main {
+
+    public static void main( String[] args ) {
+        for (int i = 10; i >= 0; i--) {
+            System.out.println(i);
+        }
+    }
+}
+//int i = 10;
+//while (i >= 0){
+//    System.out.println(i);
+//    i--;
+//}
+
+
+
+
+
+
+
+package com.company;
+
+public class Main {
+
+    public static void main( String[] args ) {
+        int shift = 5;
+        String message = "uzgqnh%xyfynh%{tni%rfns-Xywnsl`b%fwlx.";
+//        System.out.println(encrypt(shift, message));
+        System.out.println(decrypt(shift, message));
+    }
+
+    private static String decrypt( int shift, String message ) {
+        char[] result = new char[message.length()];
+        for (int i = 0; i < message.length(); i++) {
+            result[i] = (char) (message.charAt(i) + shift);
+        }
+        return new String(result);
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+ public static void main( String[] args ) {
+        int shift = 5;
+        String message = "uzgqnh%xyfynh%{tni%rfns-Xywnsl`b%fwlx.";
+        for (String s : Arrays.asList(encrypt(shift, message), decrypt(shift, message))) {
+            System.out.println(s);
+        }
+    }
+
+    public static String encrypt( int shift, String message ) {
+        char[] result;
+        result = new char[message.length()];
+        for (int i = 0; i < message.length(); i++) {
+            result[i] = (char) (message.charAt(i) + shift);
+        }
+        return new String(result);
+    }
+
+    public static String decrypt( int shift, String message ) {
+        char[] result;
+        result = new char[message.length()];
+        for (int i = 0; i < message.length(); i++) {
+            result[i] = (char) (message.charAt(i) - shift);
+        }
+        return new String(result);
+    }
+}
+
+
+
+
+
+
+
+
+
+package com.company;
+
+import java.util.Arrays;
+
+
+
+public class Main {
+
+    public static void main( String[] args) {
+        int shift = 5;
+        String message = "uzgqnh%xyfynh%{tni%rfns-Xywnsl`b%fwlx.";
+        for (String s : Arrays.asList(encrypt(shift, message), decrypt(shift, message))) {
+           System.out.println(s);
+        }
+    }
+
+    public static String encrypt( int shift, String message ) {
+        char[] result = new char[message.length()];
+        for (int i = 0; !(message.length() <= i); i++) {
+            result[i] = (char) (message.charAt(i) + shift);
+        }
+        final String s;
+        s = new String(result);
+        return s;
+    }
+
+    public static String decrypt( int shift, String message ) {
+        char[] result = new char[message.length()];
+        for (int i = 0; !(message.length() <= i); i++) {
+            result[i] = (char) (message.charAt(i) + shift);
+        }
+        final String s;
+        s = new String(result);
+        return s;
+    }
+    }
+
+
+
+package com.company;
+
+
+
+
+public class Main {
+
+    public static void main( String[] args ) {
+        int shift = 5;
+        String message = "uzgqnh%xyfynh%{tni%rfns-Xywnsl`b%fwlx.";
+       System.out.println(encrypt(shift, message));
+        System.out.println(decrypt(shift, message));
+    }
+
+    private static String encrypt( int shift, String message ) {
+        char[] result = new char[message.length()];
+        for (int i = 0; i < message.length(); i++) {
+            result[i] = (char) (message.charAt(i) + shift);
+        }
+        return new String(result);
+    }
+
+    private static String decrypt( int shift, String message ) {
+        char[] result = new char[message.length()];
+        for (int i = 0; i < message.length(); i++) {
+            result[i] = (char) (message.charAt(i) - shift);
+        }
+        return new String(result);
+
+    }
+}
